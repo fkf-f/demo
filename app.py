@@ -82,7 +82,7 @@ def index():
     # user = User.query.get(2)
     # db.session.delete(user)
     # db.session.commit()
-    # return render_template('index.html')
     user = User.query.first()  # 读取用户记录
     movies = Movie.query.all()  # 读取所有电影记录
     return render_template('index.html', user=user, movies=movies)
+
